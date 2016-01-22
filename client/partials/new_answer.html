@@ -1,0 +1,11 @@
+<div ng-controller = 'AShowController'>
+	<fieldset>
+		<legend>{{question.title}}</legend>
+		<h4 ng-bind = 'question.description'></h4>
+
+		<input type="textarea" ng-model = 'newAnswer.title' placeholder = 'Your Answer'>
+		<input type="textarea" ng-model = 'newAnswer.description' placeholder = 'Supporting detals for your answer(optional)'>
+		<input type="submit" class = 'btn btn-success' ng-click = 'addAnswer(question._id)' value = 'Submit'>
+		<button class = 'btn btn-info' href = '#/'>Cancel</button>
+	</fieldset>
+</div>

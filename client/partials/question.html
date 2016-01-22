@@ -1,0 +1,14 @@
+<div ng-controller = 'QShowController'>
+	<h1 ng-bind = 'question.title'></h1>
+	<h3 ng-bind = 'question.description'></h3>
+	
+	<ul>
+		<li ng-repeat = "answer in question.answers | filter:filter_name | orderBy:'likes'">
+			<h3 >{{answer.username}}:</h3>
+			<h4 ng-bind = 'answer.title'></h4>
+			<h5 ng-bind = 'answer.description'></h5>
+			<h5>{{answer.likes}} likes <input type="submit" value = 'Like!' ng-click = 'likes(answer._id)' class = 'btn btn-success'></h5>
+			<hr>
+		</li>
+	</ul>
+</div>

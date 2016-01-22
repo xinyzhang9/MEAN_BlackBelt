@@ -1,0 +1,19 @@
+<div ng-controller = 'questionsController'>
+	<input type="text" ng-model = "filter_name" placeholder = 'search Question'>
+		<table class = 'table'>
+			<tr>
+				<th>Questions</th>
+				<th>Answers</th>
+				<th>Actions</th>
+			</tr>
+			<tr ng-repeat = "question in questions | filter:filter_name ">
+				<td ng-bind = 'question.title'></td>
+				<td ng-bind = 'question.num_ans'></td>
+				<td>
+					<a class = 'btn btn-info' href = '#/question/{{question._id}}'>Show</a>  |  
+
+					<a href = '#/question/{{question._id}}/new_answer' class = 'btn btn-success'>Answer</a>
+				</td>
+			</tr>
+		</table>
+</div>

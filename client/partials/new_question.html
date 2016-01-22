@@ -1,0 +1,9 @@
+<div ng-controller = 'questionsController'>
+	<fieldset>
+		<legend>New Question</legend>
+		<input type="textarea" ng-model = 'newQuestion.title' placeholder = 'title'>
+		<input type="textarea" ng-model = 'newQuestion.description' placeholder = 'description(optional)'>
+		<input type="submit" class = 'btn btn-success' ng-click = 'addQuestion()' value = 'Submit'>
+		<button class = 'btn btn-info' href = '#/'>Cancel</button>
+	</fieldset>
+</div>
